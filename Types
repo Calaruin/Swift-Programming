@@ -1,0 +1,36 @@
+let totalGems = randomNumberOfGems
+
+var collectGems = 0
+
+bluePortal.isActive = true
+pinkPortal.isActive = false
+
+func toggleBlue() {
+    if bluePortal.isActive == false {
+        bluePortal.isActive = true
+    } else {
+        bluePortal.isActive = false
+    }
+}
+
+func togglePink() {
+    if pinkPortal.isActive == false {
+        pinkPortal.isActive = true
+    } else {
+        pinkPortal.isActive = false
+    }
+}
+
+while collectGems < totalGems {
+    if isBlocked {
+        turnLeft()
+        turnLeft()
+        toggleBlue()
+        togglePink()
+    }
+    moveForward()
+    if isOnGem {
+        collectGem()
+        collectGems = collectGems + 1
+    }
+}
